@@ -4,7 +4,7 @@ import time
 
 # Configuration
 URL = "https://api.aifiesta.ai"
-CONCURRENT_WORKERS = 9999999  # Exactly 5 requests at a time
+CONCURRENT_WORKERS = 99999  # Exactly 5 requests at a time
 
 async def worker(session, worker_id):
     """
