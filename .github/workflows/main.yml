@@ -24,7 +24,7 @@ jobs:
           SSH_CMD=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
           WEB_CMD=$(tmate -S /tmp/tmate.sock display -p '#{tmate_web}')
 
-          MESSAGE="🔐 GitHub Actions SSH Ready\n\nSSH:\n$SSH_CMD\n\nWeb:\n$WEB_CMD"
+          MESSAGE="🔐 GitHub Actions SSH Ready SSH: $SSH_CMD  Web: $WEB_CMD"
 
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
             -d chat_id="${CHAT_ID}" \
